@@ -7,10 +7,30 @@ module.exports = function (sequelize, DataTypes) {
         len: [1]
       }
     },
-    title: DataTypes.TEXT,
-    body: DataTypes.TEXT,
-    photo: DataTypes.STRING,
-    charities: DataTypes.STRING
+    title: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    body: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        len: [100, 4000]
+      }
+    },
+    photo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    charities: {
+      type: DataTypes.STRING
+    }
   });
   return Article;
 };
