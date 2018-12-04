@@ -18,7 +18,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
-        len: [100, 4000]
+        len: [100, 20000]
       }
     },
     photo: {
