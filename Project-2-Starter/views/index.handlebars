@@ -1,33 +1,81 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
+<header class='top-nav'>
+  <!-- <ul id='dropdown1' class='dropdown-content' style="color: gray;">
+            <li>
+                <a href='#!'>one</a>
+            </li>
+            <li>
+                <a href='#!'>two</a>
+            </li>
+            <li>
+                <a href='#!'>three</a>
+            </li>
+        </ul> -->
+  <div class='navbar-fixed'>
+    <nav class='transparent z-depth-0'>
+      <div class='nav-wrapper gray-text container'>
+        <ul class='right'>
+          <li>
+            <a href='#'>Write</a>
           </li>
-          {{/each}}
+          <li>
+            <a href='#'>Read</a>
+          </li>
+          <li>
+            <a href='#'>Inspire</a>
+          </li>
+          <li>
+            <a href='#'>About Us
+          </li>
         </ul>
       </div>
-    </div>
+    </nav>
+  </div>
+</header>
+
+<div class='row'>
+  <div class='col m6'>
+    <section class='slider'>
+      <ul class='slides'>
+        <li>
+          <img class='responsive-img home' src='bc.jpeg'>
+        </li>
+        <li>
+          <img class='responsive-img home' src='syria.jpeg'>
+        </li>
+        <li>
+          <img class='responsive-img home' src='read.jpg'>
+        </li>
+        <li>
+          <img class='responsive-img home' src='water1.jpg'>
+        </li>
+        <li>
+          <img class='responsive-img home' src='venezuela.jpg'>
+        </li>
+        <li>
+          <img class='responsive-img home' src='fire.jpg'>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <div class='col m5 center' id='description'>
+    <h1 style='color: #ffee58; font-family:  "Source Sans Pro" , sans-serif; font-weight: bold;'>INSPIRE</h1>
+    <p style='color: gray;'> write, read and inspire for good</p>
+    <i class='material-icons' style='color: #ffee58'>all_inclusive</i>
+
   </div>
 </div>
 
+<footer class='page-footer white'>
+  <div class='footer-copyright white'>
+    <div class='container center'>
+      <p style='color:gray'>Inform Navigate Serve Post Invest Reach Educate © </p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="/js/index.js"></script>
