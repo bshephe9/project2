@@ -6,6 +6,15 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  //Load the articles
+  app.get("/read", function(req, res) {
+    db.Article.findAll({}).then(function(dbArticles) {
+      res.render("read", {
+        articles: dbArticles
+      });
+    });
+  });
+
   // Load ar page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
