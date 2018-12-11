@@ -4,7 +4,7 @@ const exphbs = require("express-handlebars"); //require express-handlebars
 
 const db = require("./models"); //models folder with the models sequelize
 
-const app = express(); //"calling" exoress
+const app = express(); //"calling" express
 const PORT = process.env.PORT || 3000;
 
 // Middleware
