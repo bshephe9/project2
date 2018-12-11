@@ -6,3 +6,8 @@ var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20');
 var cookieSession = require('cookie-session');
 require('dotenv').config();
+
+app.set('port', (process.env.PORT || 8000));
+app.use(express.static('public'));
+app.set('views', __dirname + '/public');
+app.engine('html', require('ejs').renderFile);
