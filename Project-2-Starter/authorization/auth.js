@@ -9,5 +9,5 @@ require('dotenv').config();
 
 app.set('port', (process.env.PORT || 8000));
 app.use(express.static('public'));
-app.set('views', __dirname + '/public');
+app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
