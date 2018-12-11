@@ -11,3 +11,17 @@ app.set('port', (process.env.PORT || 8000));
 app.use(express.static('public'));
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
+//set up view engine
+app.set('view engine', 'html');
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+
+// cookieSession config
+app.use(cookieSession({
+    maxAge: 24 * 60 * 60 * 1000, // One day in milliseconds
+    name: 'session',
+    keys: ['randomstringhere']
+}));
