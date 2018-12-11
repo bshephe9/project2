@@ -29,3 +29,14 @@ app.use(cookieSession({
 
 app.use(passport.initialize()); // Used to initialize passport
 app.use(passport.session()); // Used to persist login sessions
+
+// Strategy config
+passport.use(new GoogleStrategy({
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    callbackURL: 'http://localhost:8000/auth/google/callback'
+},
+    (accessToken, refreshToken, profile, done) => {
+        done(null, profile); // passes the profile data to serializeUser
+    }
+));
