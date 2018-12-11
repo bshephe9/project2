@@ -23,5 +23,5 @@ app.use(bodyParser.json());
 app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000, // One day in milliseconds
     name: 'session',
-    keys: ['randomstringhere']
+    keys: process.env.COOKIE_KEY,
 }));
