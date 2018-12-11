@@ -3,6 +3,7 @@ const express = require("express"); //require express
 const exphbs = require("express-handlebars"); //require express-handlebars
 
 const db = require("./models"); //models folder with the models sequelize
+var authorization = require("./authrization/auth.js");
 
 const app = express(); //"calling" express
 const PORT = process.env.PORT || 3000;
